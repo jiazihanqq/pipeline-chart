@@ -2,14 +2,15 @@ import React from "react";
 
 export interface IProps {
   label: string;
+  x: number;
 }
-export const Track: React.FC<IProps> = (props) => {
-  const { label } = props;
+export const Stage: React.FC<IProps> = (props) => {
+  const { label, x } = props;
   return (
     <>
-      <g>
-        <text>{label}</text>
-      </g>
+      <text x={x} y={50} fontSize={30}>
+        {label}
+      </text>
     </>
   );
 };
